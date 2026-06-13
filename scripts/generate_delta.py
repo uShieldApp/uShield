@@ -244,6 +244,8 @@ def main():
                         help="Maximum number of delta rules (Safari limit is 30K, keep buffer)")
     parser.add_argument("--temp-dir", default="/tmp/ushield_filters",
                         help="Temporary directory for downloaded filter lists")
+    parser.add_argument("--delta-url", default="https://uShieldApp.github.io/uShield/delta_rules.json",
+                        help="URL where this delta file will be hosted")
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)
@@ -346,7 +348,7 @@ def main():
         "updated_at": now.isoformat(),
         "expires_hours": 24,
         "stats": stats,
-        "delta_url": "https://uShieldApp.github.io/uShield/delta_rules.json"
+        "delta_url": args.delta_url
     }
     
     version_path = os.path.join(args.output_dir, "version.json")

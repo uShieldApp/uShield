@@ -28,10 +28,29 @@ jobs:
       - name: Generate delta rules
         run: |
           mkdir -p ../output
-          python3 scripts/generate_delta.py \
-            --baseline-dir ./baseline \
-            --output-dir ../output \
-            --max-delta-rules 28000
+          # Loop through all directories starting with 'baseline'
+          for bdir in baseline*; do
+            if [ -d "$bdir" ]; then
+              outdir="../output"
+              delta_url="https://uShieldApp.github.io/uShield/delta_rules.json"
+              
+              # If it's a versioned baseline (e.g. baseline_v2), append the version
+              if [ "$bdir" != "baseline" ]; then
+                version_suffix="${bdir#baseline_}"
+                outdir="../output/${version_suffix}"
+                delta_url="https://uShieldApp.github.io/uShield/${version_suffix}/delta_rules.json"
+              fi
+              
+              mkdir -p "$outdir"
+              echo "Generating delta for $bdir -> $outdir"
+              
+              python3 scripts/generate_delta.py \
+                --baseline-dir "./$bdir" \
+                --output-dir "$outdir" \
+                --delta-url "$delta_url" \
+                --max-delta-rules 28000
+            fi
+          done
 
       - name: Deploy to GitHub Pages
         run: |
@@ -46,9 +65,8 @@ jobs:
           git rm -rf . 2>/dev/null || true
           find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
           
-          # Copy output files
-          cp ../output/delta_rules.json .
-          cp ../output/version.json .
+          # Copy all generated output files and directories
+          cp -R ../output/* .
           
           # Create a simple index.html
           cat > index.html << 'EOF'
@@ -62,6 +80,7 @@ jobs:
               <li><a href="version.json">version.json</a> — Current version metadata</li>
               <li><a href="delta_rules.json">delta_rules.json</a> — Delta rules for DNR</li>
             </ul>
+            <p>If you have newer versions, check their subdirectories (e.g., /v2/version.json)</p>
           </body>
           </html>
           EOF
