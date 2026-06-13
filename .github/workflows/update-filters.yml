@@ -46,23 +46,16 @@ jobs:
             fi
           done
 
-      - name: Deploy to GitHub Pages
+      - name: Commit and Push to Main
         run: |
           # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Switch to gh-pages branch (create if not exists)
-          git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages
+          # Copy all generated output files back to their respective rules directories
+          cp -R ../output/rules/* rules/
           
-          # Clean everything except .git
-          git rm -rf . 2>/dev/null || true
-          find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
-          
-          # Copy all generated output files and directories
-          cp -R ../output/* .
-          
-          # Create a simple index.html
+          # Create a simple index.html for Github Pages
           cat > index.html << 'EOF'
           <!DOCTYPE html>
           <html>
@@ -78,4 +71,4 @@ jobs:
           # Commit and push
           git add -A
           git commit -m "Update delta rules: $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes to commit"
-          git push origin gh-pages --force
+          git push origin main
