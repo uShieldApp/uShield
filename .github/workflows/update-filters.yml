@@ -27,10 +27,10 @@ jobs:
 
       - name: Generate delta rules
         run: |
-          mkdir -p output
+          mkdir -p ../output
           python3 scripts/generate_delta.py \
             --baseline-dir ./baseline \
-            --output-dir ./output \
+            --output-dir ../output \
             --max-delta-rules 28000
 
       - name: Deploy to GitHub Pages
@@ -47,8 +47,8 @@ jobs:
           find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
           
           # Copy output files
-          cp output/delta_rules.json .
-          cp output/version.json .
+          cp ../output/delta_rules.json .
+          cp ../output/version.json .
           
           # Create a simple index.html
           cat > index.html << 'EOF'
