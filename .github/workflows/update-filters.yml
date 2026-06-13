@@ -28,24 +28,18 @@ jobs:
       - name: Generate delta rules
         run: |
           mkdir -p ../output
-          # Loop through all directories starting with 'baseline'
-          for bdir in baseline*; do
-            if [ -d "$bdir" ]; then
-              outdir="../output"
-              delta_url="https://uShieldApp.github.io/uShield/delta_rules.json"
-              
-              # If it's a versioned baseline (e.g. baseline_v2), append the version
-              if [ "$bdir" != "baseline" ]; then
-                version_suffix="${bdir#baseline_}"
-                outdir="../output/${version_suffix}"
-                delta_url="https://uShieldApp.github.io/uShield/${version_suffix}/delta_rules.json"
-              fi
+          # Loop through all version directories in 'rules/'
+          for vdir in rules/*; do
+            if [ -d "$vdir/baseline" ]; then
+              version=$(basename "$vdir")
+              outdir="../output/rules/$version"
+              delta_url="https://uShieldApp.github.io/uShield/rules/$version/delta_rules.json"
               
               mkdir -p "$outdir"
-              echo "Generating delta for $bdir -> $outdir"
+              echo "Generating delta for $version -> $outdir"
               
               python3 scripts/generate_delta.py \
-                --baseline-dir "./$bdir" \
+                --baseline-dir "$vdir/baseline" \
                 --output-dir "$outdir" \
                 --delta-url "$delta_url" \
                 --max-delta-rules 28000
@@ -76,11 +70,7 @@ jobs:
           <body>
             <h1>uShield OTA Filter Updates</h1>
             <p>This page hosts the latest delta filter rules for uShield.</p>
-            <ul>
-              <li><a href="version.json">version.json</a> — Current version metadata</li>
-              <li><a href="delta_rules.json">delta_rules.json</a> — Delta rules for DNR</li>
-            </ul>
-            <p>If you have newer versions, check their subdirectories (e.g., /v2/version.json)</p>
+            <p>Rules are organized by version (e.g., <a href="rules/v1.0.0/version.json">v1.0.0</a>)</p>
           </body>
           </html>
           EOF
