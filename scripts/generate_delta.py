@@ -304,8 +304,10 @@ def main():
 
     # Step 4: Trim if over limit and mark as outdated
     outdated_baseline = False
-    if len(all_delta_rules) > args.max_delta_rules:
+    if len(all_delta_rules) >= 20000:
         outdated_baseline = True
+        
+    if len(all_delta_rules) > args.max_delta_rules:
         print(f"\n⚠️  Delta exceeds limit ({args.max_delta_rules}). Trimming...")
         # Prioritize: block rules first, then by source order
         # Keep allow rules (exceptions) with high priority
