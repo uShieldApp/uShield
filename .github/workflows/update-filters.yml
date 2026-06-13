@@ -1,0 +1,72 @@
+name: Update Filter Rules (OTA Delta)
+
+on:
+  schedule:
+    # Run every day at 04:00 UTC (11:00 AM Vietnam time)
+    - cron: '0 4 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  update-filters:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate delta rules
+        run: |
+          mkdir -p output
+          python3 scripts/generate_delta.py \
+            --baseline-dir ./baseline \
+            --output-dir ./output \
+            --max-delta-rules 28000
+
+      - name: Deploy to GitHub Pages
+        run: |
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Switch to gh-pages branch (create if not exists)
+          git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages
+          
+          # Clean everything except .git
+          git rm -rf . 2>/dev/null || true
+          find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
+          
+          # Copy output files
+          cp output/delta_rules.json .
+          cp output/version.json .
+          
+          # Create a simple index.html
+          cat > index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head><title>uShield Filter Updates</title></head>
+          <body>
+            <h1>uShield OTA Filter Updates</h1>
+            <p>This page hosts the latest delta filter rules for uShield.</p>
+            <ul>
+              <li><a href="version.json">version.json</a> — Current version metadata</li>
+              <li><a href="delta_rules.json">delta_rules.json</a> — Delta rules for DNR</li>
+            </ul>
+          </body>
+          </html>
+          EOF
+          
+          # Commit and push
+          git add -A
+          git commit -m "Update delta rules: $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes to commit"
+          git push origin gh-pages --force
