@@ -346,7 +346,7 @@ def main():
         "updated_at": now.isoformat(),
         "expires_hours": 24,
         "stats": stats,
-        "delta_url": "https://huykhoi0504.github.io/uShield/delta_rules.json"
+        "delta_url": "https://uShieldApp.github.io/uShield/delta_rules.json"
     }
     
     version_path = os.path.join(args.output_dir, "version.json")
