@@ -42,7 +42,7 @@ jobs:
                 --baseline-dir "$vdir/baseline" \
                 --output-dir "$outdir" \
                 --delta-url "$delta_url" \
-                --max-delta-rules 28000
+                --max-delta-rules 29500
             fi
           done
 
