@@ -302,8 +302,10 @@ def main():
 
     print(f"\nTotal delta rules: {len(all_delta_rules)}")
 
-    # Step 4: Trim if over limit
+    # Step 4: Trim if over limit and mark as outdated
+    outdated_baseline = False
     if len(all_delta_rules) > args.max_delta_rules:
+        outdated_baseline = True
         print(f"\n⚠️  Delta exceeds limit ({args.max_delta_rules}). Trimming...")
         # Prioritize: block rules first, then by source order
         # Keep allow rules (exceptions) with high priority
@@ -348,7 +350,8 @@ def main():
         "updated_at": now.isoformat(),
         "expires_hours": 24,
         "stats": stats,
-        "delta_url": args.delta_url
+        "delta_url": args.delta_url,
+        "outdated_baseline": outdated_baseline
     }
     
     version_path = os.path.join(args.output_dir, "version.json")
