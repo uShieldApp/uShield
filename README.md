@@ -12,6 +12,10 @@ It utilizes GitHub Actions to dynamically generate and host delta JSON rules dai
 4.  **CDN Hosting**: It calculates the exact difference (delta) and publishes a `delta_rules.json` file back to the `main` branch. 
 5.  **Over-The-Air Updates**: The uShield Safari Extension periodically fetches this tiny delta file and merges it with its native baseline. Users get 100% up-to-date protection without ever needing to update the app from the App Store!
 
+## 📥 Download uShield
+
+*(Coming soon to the App Store)*  
+[<img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1276560000&h=7e7b68fb1eaac8db330860c8f533a3ce" alt="Download on the App Store">](#)
 ## 📜 Credits & License
 
 The filter rules generated and hosted here are entirely sourced from the incredible open-source community:
