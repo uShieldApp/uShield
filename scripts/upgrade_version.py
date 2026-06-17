@@ -341,6 +341,22 @@ def main():
     else:
         print(result.stdout)
 
+    # Step 4: Generate static_whitelist.json
+    print("\n--- Step 4: Generating Static Whitelist JSON ---")
+    cmd_static = [
+        sys.executable,
+        "scripts/update_static_whitelist.py",
+        "--output-dir", version_dir
+    ]
+    print(f"Executing: {' '.join(cmd_static)}")
+    result_static = subprocess.run(cmd_static, capture_output=True, text=True)
+    if result_static.returncode != 0:
+        print("CRITICAL ERROR generating static whitelist:")
+        print(result_static.stderr)
+        sys.exit(result_static.returncode)
+    else:
+        print(result_static.stdout)
+
     # Clean up temporary directory
     print("\nCleaning up temporary files...")
     for file in os.listdir(temp_dir):
