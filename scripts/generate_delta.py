@@ -55,8 +55,8 @@ def parse_options(options_str):
     opts = options_str.split(',')
     resourceTypes = []
     excludedResourceTypes = []
-    requestDomains = []
-    excludedRequestDomains = []
+    initiatorDomains = []
+    excludedInitiatorDomains = []
     is_third_party = None
 
     for opt in opts:
@@ -68,9 +68,9 @@ def parse_options(options_str):
             domains = opt[7:].split('|')
             for d in domains:
                 if d.startswith('~'):
-                    excludedRequestDomains.append(d[1:])
+                    excludedInitiatorDomains.append(d[1:])
                 else:
-                    requestDomains.append(d)
+                    initiatorDomains.append(d)
         elif opt.startswith('~'):
             res = RESOURCE_MAP.get(opt[1:])
             if res:
@@ -85,10 +85,10 @@ def parse_options(options_str):
         condition['resourceTypes'] = resourceTypes
     if excludedResourceTypes:
         condition['excludedResourceTypes'] = excludedResourceTypes
-    if requestDomains:
-        condition['requestDomains'] = requestDomains
-    if excludedRequestDomains:
-        condition['excludedRequestDomains'] = excludedRequestDomains
+    if initiatorDomains:
+        condition['initiatorDomains'] = initiatorDomains
+    if excludedInitiatorDomains:
+        condition['excludedInitiatorDomains'] = excludedInitiatorDomains
 
     if is_third_party is True:
         condition['domainType'] = 'thirdParty'

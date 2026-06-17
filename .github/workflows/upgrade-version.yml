@@ -1,17 +1,18 @@
-name: Update Filter Rules (OTA Delta)
+name: Upgrade Filter Rules Version
 
 on:
-  schedule:
-    # Run every day at 04:00 UTC (11:00 AM Vietnam time)
-    - cron: '0 4 * * *'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      version_number:
+        description: 'New version number (e.g. 1.0.1 or v1.0.1)'
+        required: true
+        type: string
 
 permissions:
   contents: write
-  pages: write
 
 jobs:
-  update-filters:
+  upgrade-version:
     runs-on: ubuntu-latest
     
     steps:
@@ -25,35 +26,15 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Generate delta rules
+      - name: Generate new baseline rules
         run: |
-          mkdir -p ../output
-          # Loop through all version directories in 'rules/'
-          for vdir in rules/*; do
-            if [ -d "$vdir/baseline" ]; then
-              version=$(basename "$vdir")
-              outdir="../output/rules/$version"
-              delta_url="https://uShieldApp.github.io/uShield/rules/$version/delta_rules.json"
-              
-              mkdir -p "$outdir"
-              echo "Generating delta for $version -> $outdir"
-              
-              python3 scripts/generate_delta.py \
-                --baseline-dir "$vdir/baseline" \
-                --output-dir "$outdir" \
-                --delta-url "$delta_url" \
-                --max-delta-rules 29500
-            fi
-          done
+          python3 scripts/upgrade_version.py --version "${{ github.event.inputs.version_number }}"
 
       - name: Commit and Push to Main
         run: |
           # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Copy all generated output files back to their respective rules directories
-          cp -R ../output/rules/* rules/
           
           # Create a dynamic index.html for Github Pages listing all versions
           cat > index.html << 'EOF'
@@ -96,5 +77,5 @@ jobs:
           
           # Commit and push
           git add -A
-          git commit -m "Update delta rules: $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes to commit"
+          git commit -m "Upgrade filter version to v${{ github.event.inputs.version_number }}" || echo "No changes to commit"
           git push origin main
