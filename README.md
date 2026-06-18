@@ -14,8 +14,7 @@ It utilizes GitHub Actions to dynamically generate and host delta JSON rules dai
 
 ## 📥 Download uShield
 
-*(Coming soon to the App Store)*  
-[<img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1276560000&h=7e7b68fb1eaac8db330860c8f533a3ce" alt="Download on the App Store">](#)
+[<img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1276560000&h=7e7b68fb1eaac8db330860c8f533a3ce" alt="Download on the App Store">](https://apps.apple.com/app/ushield-browser-adblocker/id6778865496)
 ## 📜 Credits & License
 
 The filter rules generated and hosted here are entirely sourced from the incredible open-source community:
