@@ -47,7 +47,7 @@ def main():
     data = {
         "latest_version": version,
         "min_required_version": "1.0.0",
-        "store_url": "https://apps.apple.com/app/id6452277028",
+        "store_url": "https://apps.apple.com/app/ushield-browser-adblocker/id6778865496",
         "rules_updated_count": args.rules_count,
         "patch_notes": {
             "en": notes_en,
