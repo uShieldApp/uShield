@@ -16,7 +16,7 @@ def main():
     parser.add_argument("--rules-count", type=int, default=1500, help="Số lượng rule chặn quảng cáo được cập nhật")
     parser.add_argument("--force-update", action="store_true", help="Cờ bắt buộc cập nhật ứng dụng")
     
-    # 8 ngôn ngữ được hỗ trợ
+    # 9 ngôn ngữ được hỗ trợ
     parser.add_argument("--patch-notes-en", default="", help="Patch notes bằng tiếng Anh (ngăn cách bởi |)")
     parser.add_argument("--patch-notes-vi", default="", help="Patch notes bằng tiếng Việt (ngăn cách bởi |)")
     parser.add_argument("--patch-notes-de", default="", help="Patch notes bằng tiếng Đức (ngăn cách bởi |)")
@@ -25,6 +25,7 @@ def main():
     parser.add_argument("--patch-notes-ru", default="", help="Patch notes bằng tiếng Nga (ngăn cách bởi |)")
     parser.add_argument("--patch-notes-id", default="", help="Patch notes bằng tiếng Indonesia (ngăn cách bởi |)")
     parser.add_argument("--patch-notes-zh-hans", default="", help="Patch notes bằng tiếng Trung giản thể (ngăn cách bởi |)")
+    parser.add_argument("--patch-notes-ja", default="", help="Patch notes bằng tiếng Nhật (ngăn cách bởi |)")
     
     args = parser.parse_args()
     
@@ -42,6 +43,7 @@ def main():
     notes_ru = parse_notes(args.patch_notes_ru, f"Обновлено {args.rules_count:,} правил блокировки рекламы для более быстрого и безопасного просмотра.")
     notes_id = parse_notes(args.patch_notes_id, f"Memperbarui {args.rules_count:,} aturan pemblokiran iklan untuk penjelajahan yang lebih cepat dan aman.")
     notes_zh_hans = parse_notes(args.patch_notes_zh_hans, f"更新了 {args.rules_count:,} 条广告拦截规则，以实现更快、更安全的浏览。")
+    notes_ja = parse_notes(args.patch_notes_ja, f"より高速で安全なブラウジングのために、{args.rules_count:,}個の広告ブロック規則を更新しました。")
     
     # Tạo cấu trúc dữ liệu JSON cập nhật
     data = {
@@ -57,7 +59,8 @@ def main():
             "es": notes_es,
             "ru": notes_ru,
             "id": notes_id,
-            "zh-Hans": notes_zh_hans
+            "zh-Hans": notes_zh_hans,
+            "ja": notes_ja
         },
         "is_force_update": args.force_update
     }
@@ -67,7 +70,7 @@ def main():
     try:
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
-        print(f"✅ Đã tạo thành công {output_file} hỗ trợ 8 ngôn ngữ cho phiên bản {version}")
+        print(f"✅ Đã tạo thành công {output_file} hỗ trợ 9 ngôn ngữ cho phiên bản {version}")
         print(json.dumps(data, indent=2, ensure_ascii=False))
     except Exception as e:
         print(f"❌ Lỗi khi ghi file {output_file}: {e}")

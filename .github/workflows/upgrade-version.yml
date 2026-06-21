@@ -39,6 +39,10 @@ on:
         description: 'Patch notes in Simplified Chinese (split by |)'
         required: false
         type: string
+      patch_notes_ja:
+        description: 'Patch notes in Japanese (split by |)'
+        required: false
+        type: string
       rules_updated_count:
         description: 'Number of ad blocking rules updated'
         required: false
@@ -84,6 +88,7 @@ jobs:
             --patch-notes-ru "${{ github.event.inputs.patch_notes_ru }}" \
             --patch-notes-id "${{ github.event.inputs.patch_notes_id }}" \
             --patch-notes-zh-hans "${{ github.event.inputs.patch_notes_zh_hans }}" \
+            --patch-notes-ja "${{ github.event.inputs.patch_notes_ja }}" \
             --rules-count "${{ github.event.inputs.rules_updated_count }}" \
             ${{ github.event.inputs.is_force_update == 'true' && '--force-update' || '' }}
 

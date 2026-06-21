@@ -46,7 +46,7 @@ CORE_SOURCES = {
     }
 }
 
-# 21 Regional filter lists
+# 22 Regional filter lists
 REGIONAL_SOURCES = {
     "vietnamese": "https://abpvn.com/filter/abpvn-FCfc5D.txt",
     "indonesian": "https://easylist-downloads.adblockplus.org/abpindo.txt",
@@ -68,7 +68,8 @@ REGIONAL_SOURCES = {
     "romanesc": "https://raw.githubusercontent.com/tcptomato/ROad-Block/master/road-block-filters-light.txt",
     "nordic": "https://raw.githubusercontent.com/dandelionsprout/adfilt/master/NorwegianList.txt",
     "arabic": "https://raw.githubusercontent.com/easylist/listear/master/Liste_AR.txt",
-    "hebrew": "https://easylist-downloads.adblockplus.org/israellist.txt"
+    "hebrew": "https://easylist-downloads.adblockplus.org/israellist.txt",
+    "japanese": "COMBINED_JAPANESE"
 }
 
 # Fixed index mapping to ensure stable regional rule ID ranges matching v1.0.0
@@ -93,7 +94,8 @@ REGIONAL_MAPPING = {
     "hebrew": 17,
     "dutch": 18,
     "korean": 19,
-    "polish": 20
+    "polish": 20,
+    "japanese": 21
 }
 
 # DNR Resource Types Mapping
@@ -304,9 +306,37 @@ def main():
         start_id = 10000000 + (index * 50000)
         
         temp_txt = os.path.join(temp_dir, f"regional_{lang_key}.txt")
-        if not download_file(url, temp_txt):
-            print(f"WARNING: Failed to download regional list {lang_key}. Skipping.")
-            continue
+        if lang_key == "japanese":
+            # Dynamically combine Mochi and Fanboy Japanese lists
+            mochi_url = "https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/mochi_filter.txt"
+            fanboy_url = "https://secure.fanboy.co.nz/fanboy-japanese.txt"
+            temp_mochi = os.path.join(temp_dir, "mochi_raw.txt")
+            temp_fanboy = os.path.join(temp_dir, "fanboy_raw.txt")
+            
+            print("Downloading and merging combined Japanese filter list (Mochi + Fanboy)...")
+            if not download_file(mochi_url, temp_mochi) or not download_file(fanboy_url, temp_fanboy):
+                print("WARNING: Failed to download Japanese lists. Skipping.")
+                continue
+                
+            # Merge files
+            try:
+                with open(temp_txt, 'w', encoding='utf-8') as out_f:
+                    out_f.write("! Combined Japanese Filter (Mochi + Fanboy)\n")
+                    out_f.write("! Mochi: CC0 1.0 Universal\n")
+                    out_f.write("! Fanboy Japanese: CC BY 3.0\n\n")
+                    
+                    for src in [temp_mochi, temp_fanboy]:
+                        with open(src, 'r', encoding='utf-8', errors='ignore') as in_f:
+                            out_f.write(in_f.read())
+                            out_f.write("\n")
+                print("  -> Combined Japanese filter list successfully written.")
+            except Exception as e:
+                print(f"WARNING: Error combining Japanese lists: {e}")
+                continue
+        else:
+            if not download_file(url, temp_txt):
+                print(f"WARNING: Failed to download regional list {lang_key}. Skipping.")
+                continue
             
         print(f"Parsing regional list '{lang_key}' with start ID {start_id}...")
         rules = parse_to_dnr(temp_txt, start_id=start_id)
