@@ -1,0 +1,49 @@
+{
+  "latest_version": "1.0.4",
+  "min_required_version": "1.0.0",
+  "store_url": "https://apps.apple.com/app/id6452277028",
+  "rules_updated_count": 1500,
+  "patch_notes": {
+    "en": [
+      "Fix navigation guard issues",
+      "Update 1,500 new ad-blocking rules",
+      "Integrate release Patch Notes"
+    ],
+    "vi": [
+      "Khắc phục lỗi điều hướng Navigation Guard",
+      "Cập nhật 1,500 rules chặn quảng cáo mới",
+      "Tích hợp nhật ký cập nhật Patch Notes"
+    ],
+    "de": [
+      "Fehler bei der Navigationssicherung behoben",
+      "1.500 neue Werbeblocker-Regeln hinzugefügt",
+      "Patchnotes integriert"
+    ],
+    "fr": [
+      "Correction des problèmes de garde de navigation",
+      "Mise à jour de 1 500 nouvelles règles de blocage",
+      "Notes de version intégrées"
+    ],
+    "es": [
+      "Se corrigieron problemas de guardia de navegación",
+      "Se actualizaron 1,500 nuevas reglas de bloqueo",
+      "Notas de versión integradas"
+    ],
+    "ru": [
+      "Исправлены проблемы с навигационной защитой",
+      "Обновлено 1500 новых правил блокировки",
+      "Интегрировано описание обновлений"
+    ],
+    "id": [
+      "Memperbaiki masalah pelindung navigasi",
+      "Memperbarui 1.500 aturan pemblokiran iklan baru",
+      "Mengintegrasikan catatan rilis"
+    ],
+    "zh-Hans": [
+      "修复导航守卫问题",
+      "更新1,500条全新广告拦截规则",
+      "集成更新日志"
+    ]
+  },
+  "is_force_update": false
+}

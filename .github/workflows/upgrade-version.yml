@@ -7,6 +7,48 @@ on:
         description: 'New version number (e.g. 1.0.1 or v1.0.1)'
         required: true
         type: string
+      patch_notes_en:
+        description: 'Patch notes in English (split by |)'
+        required: false
+        type: string
+      patch_notes_vi:
+        description: 'Patch notes in Vietnamese (split by |)'
+        required: false
+        type: string
+      patch_notes_de:
+        description: 'Patch notes in German (split by |)'
+        required: false
+        type: string
+      patch_notes_fr:
+        description: 'Patch notes in French (split by |)'
+        required: false
+        type: string
+      patch_notes_es:
+        description: 'Patch notes in Spanish (split by |)'
+        required: false
+        type: string
+      patch_notes_ru:
+        description: 'Patch notes in Russian (split by |)'
+        required: false
+        type: string
+      patch_notes_id:
+        description: 'Patch notes in Indonesian (split by |)'
+        required: false
+        type: string
+      patch_notes_zh_hans:
+        description: 'Patch notes in Simplified Chinese (split by |)'
+        required: false
+        type: string
+      rules_updated_count:
+        description: 'Number of ad blocking rules updated'
+        required: false
+        default: '1500'
+        type: string
+      is_force_update:
+        description: 'Force users to update app'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -29,6 +71,21 @@ jobs:
       - name: Generate new baseline rules and static whitelist
         run: |
           python3 scripts/upgrade_version.py --version "${{ github.event.inputs.version_number }}"
+
+      - name: Generate app_update.json
+        run: |
+          python3 scripts/generate_app_update.py \
+            --version "${{ github.event.inputs.version_number }}" \
+            --patch-notes-en "${{ github.event.inputs.patch_notes_en }}" \
+            --patch-notes-vi "${{ github.event.inputs.patch_notes_vi }}" \
+            --patch-notes-de "${{ github.event.inputs.patch_notes_de }}" \
+            --patch-notes-fr "${{ github.event.inputs.patch_notes_fr }}" \
+            --patch-notes-es "${{ github.event.inputs.patch_notes_es }}" \
+            --patch-notes-ru "${{ github.event.inputs.patch_notes_ru }}" \
+            --patch-notes-id "${{ github.event.inputs.patch_notes_id }}" \
+            --patch-notes-zh-hans "${{ github.event.inputs.patch_notes_zh_hans }}" \
+            --rules-count "${{ github.event.inputs.rules_updated_count }}" \
+            ${{ github.event.inputs.is_force_update == 'true' && '--force-update' || '' }}
 
       - name: Commit and Push to Main
         run: |
