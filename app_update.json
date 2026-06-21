@@ -5,44 +5,31 @@
   "rules_updated_count": 1500,
   "patch_notes": {
     "en": [
-      "Fix navigation guard issues",
-      "Update 1,500 new ad-blocking rules",
-      "Integrate release Patch Notes"
+      "- Support Japanese regional filter\n- Update ad-blocking rules\n- Bug fixes and performance improvements\n- Add patch notes feature"
     ],
     "vi": [
-      "Khắc phục lỗi điều hướng Navigation Guard",
-      "Cập nhật 1,500 rules chặn quảng cáo mới",
-      "Tích hợp nhật ký cập nhật Patch Notes"
+      "- Hỗ trợ lọc khu vực Nhật Bản\n- Cập nhật quy tắc chặn quảng cáo\n- Sửa lỗi và cải thiện hiệu suất\n- Thêm tính năng ghi chú vá lỗi"
     ],
     "de": [
-      "Fehler bei der Navigationssicherung behoben",
-      "1.500 neue Werbeblocker-Regeln hinzugefügt",
-      "Patchnotes integriert"
+      "- Unterstützt japanische Regionalfilter\n- Aktualisieren Sie die Werbeblockerregeln\n- Fehlerbehebungen und Leistungsverbesserungen\n- Patchnotizen-Funktion hinzufügen"
     ],
     "fr": [
-      "Correction des problèmes de garde de navigation",
-      "Mise à jour de 1 500 nouvelles règles de blocage",
-      "Notes de version intégrées"
+      "- Prise en charge du filtre régional japonais\n- Mettre à jour les règles de blocage des publicités\n- Corrections de bugs et améliorations des performances\n- Ajouter une fonctionnalité de notes de patch"
     ],
     "es": [
-      "Se corrigieron problemas de guardia de navegación",
-      "Se actualizaron 1,500 nuevas reglas de bloqueo",
-      "Notas de versión integradas"
+      "- Admite filtro regional japonés\n- Actualizar las reglas de bloqueo de anuncios.\n- Corrección de errores y mejoras de rendimiento.\n- Agregar función de notas de parche"
     ],
     "ru": [
-      "Исправлены проблемы с навигационной защитой",
-      "Обновлено 1500 новых правил блокировки",
-      "Интегрировано описание обновлений"
+      "- Поддержка японского регионального фильтра\n- Обновление правил блокировки рекламы.\n- Исправлены ошибки и улучшена производительность.\n- Добавить функцию примечаний к патчу"
     ],
     "id": [
-      "Memperbaiki masalah pelindung navigasi",
-      "Memperbarui 1.500 aturan pemblokiran iklan baru",
-      "Mengintegrasikan catatan rilis"
+      "- Mendukung filter regional Jepang\n- Perbarui aturan pemblokiran iklan\n- Perbaikan bug dan peningkatan kinerja\n- Tambahkan fitur catatan tempel"
     ],
     "zh-Hans": [
-      "修复导航守卫问题",
-      "更新1,500条全新广告拦截规则",
-      "集成更新日志"
+      "- 支持日本地区过滤\n- 更新广告拦截规则\n- 错误修复和性能改进\n- 添加补丁说明功能"
+    ],
+    "ja": [
+      "- 日本の地域フィルターをサポート\n- 広告ブロックルールを更新する\n- バグ修正とパフォーマンスの改善\n- パッチノート機能を追加"
     ]
   },
   "is_force_update": false
