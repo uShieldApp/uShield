@@ -1,35 +1,35 @@
 {
-  "latest_version": "1.0.4",
+  "latest_version": "1.0.5",
   "min_required_version": "1.0.0",
   "store_url": "https://apps.apple.com/app/ushield-browser-adblocker/id6778865496",
-  "rules_updated_count": 1500,
+  "rules_updated_count": 2000,
   "patch_notes": {
     "en": [
-      "- Support Japanese regional filter\n- Update ad-blocking rules\n- Bug fixes and performance improvements\n- Add patch notes feature"
+      "- Upgrade extension settings interface\n- Upgrade anti-adblock defuser\n- Fix navigation protection bug\n- Update to the latest filters"
     ],
     "vi": [
-      "- Hỗ trợ lọc khu vực Nhật Bản\n- Cập nhật quy tắc chặn quảng cáo\n- Sửa lỗi và cải thiện hiệu suất\n- Thêm tính năng ghi chú vá lỗi"
+      "- Nâng cấp giao diện cài đặt tiện ích mở rộng\n- Nâng cấp trình gỡ bỏ chặn quảng cáo\n- Sửa lỗi bảo vệ điều hướng\n- Cập nhật các bộ lọc mới nhất"
     ],
     "de": [
-      "- Unterstützt japanische Regionalfilter\n- Aktualisieren Sie die Werbeblockerregeln\n- Fehlerbehebungen und Leistungsverbesserungen\n- Patchnotizen-Funktion hinzufügen"
+      "- Aktualisieren Sie die Benutzeroberfläche für Erweiterungseinstellungen\n- Aktualisieren Sie den Anti-Adblock-Defuser\n- Fehler beim Navigationsschutz behoben\n- Aktualisieren Sie auf die neuesten Filter"
     ],
     "fr": [
-      "- Prise en charge du filtre régional japonais\n- Mettre à jour les règles de blocage des publicités\n- Corrections de bugs et améliorations des performances\n- Ajouter une fonctionnalité de notes de patch"
+      "- Mettre à niveau l'interface des paramètres d'extension\n- Mettre à niveau le désamorceur anti-adblock\n- Correction d'un bug de protection de la navigation\n- Mise à jour avec les derniers filtres"
     ],
     "es": [
-      "- Admite filtro regional japonés\n- Actualizar las reglas de bloqueo de anuncios.\n- Corrección de errores y mejoras de rendimiento.\n- Agregar función de notas de parche"
+      "- Actualizar la interfaz de configuración de la extensión\n- Actualizar el desactivador anti-adblock\n- Corregir error de protección de navegación.\n- Actualización a los últimos filtros."
     ],
     "ru": [
-      "- Поддержка японского регионального фильтра\n- Обновление правил блокировки рекламы.\n- Исправлены ошибки и улучшена производительность.\n- Добавить функцию примечаний к патчу"
+      "- Обновление интерфейса настроек расширения.\n- Обновление антиблокировщика рекламы.\n- Исправлена ошибка защиты навигации.\n- Обновление до последних фильтров"
     ],
     "id": [
-      "- Mendukung filter regional Jepang\n- Perbarui aturan pemblokiran iklan\n- Perbaikan bug dan peningkatan kinerja\n- Tambahkan fitur catatan tempel"
+      "- Tingkatkan antarmuka pengaturan ekstensi\n- Tingkatkan pencegah anti-adblock\n- Perbaiki bug perlindungan navigasi\n- Perbarui ke filter terbaru"
     ],
     "zh-Hans": [
-      "- 支持日本地区过滤\n- 更新广告拦截规则\n- 错误修复和性能改进\n- 添加补丁说明功能"
+      "- 升级扩展设置界面\n- 升级反广告拦截消除器\n- 修复导航保护错误\n- 更新到最新的过滤器"
     ],
     "ja": [
-      "- 日本の地域フィルターをサポート\n- 広告ブロックルールを更新する\n- バグ修正とパフォーマンスの改善\n- パッチノート機能を追加"
+      "- 拡張機能設定インターフェースのアップグレード\n- アンチアドブロックディフューザーをアップグレード\n- ナビゲーション保護のバグを修正\n- 最新のフィルターに更新します"
     ]
   },
   "is_force_update": false
