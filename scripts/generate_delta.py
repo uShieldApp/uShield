@@ -47,7 +47,9 @@ RESOURCE_MAP = {
     'media': 'media',
     'font': 'font',
     'third-party': None,
-    '~third-party': None
+    '~third-party': None,
+    'first-party': None,
+    '~first-party': None
 }
 
 
@@ -60,13 +62,20 @@ def parse_options(options_str):
     is_third_party = None
 
     for opt in opts:
-        if opt == 'third-party':
+        opt = opt.strip()
+        if not opt:
+            continue
+            
+        if opt == 'third-party' or opt == '~first-party':
             is_third_party = True
-        elif opt == '~third-party':
+        elif opt == '~third-party' or opt == 'first-party':
             is_third_party = False
         elif opt.startswith('domain='):
             domains = opt[7:].split('|')
             for d in domains:
+                d = d.strip()
+                if not d:
+                    continue
                 if d.startswith('~'):
                     excludedInitiatorDomains.append(d[1:])
                 else:
@@ -103,7 +112,7 @@ def parse_easylist_to_dnr(input_file, start_id=1):
     rules = []
     current_id = start_id
 
-    with open(input_file, 'r', encoding='utf-8') as f:
+    with open(input_file, 'r', encoding='utf-8', errors='ignore') as f:
         for line in f:
             line = line.strip()
             if not line or line.startswith('!') or line.startswith('['):

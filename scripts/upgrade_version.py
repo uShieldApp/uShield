@@ -114,7 +114,9 @@ RESOURCE_MAP = {
     'media': 'media',
     'font': 'font',
     'third-party': None,
-    '~third-party': None
+    '~third-party': None,
+    'first-party': None,
+    '~first-party': None
 }
 
 def download_file(url, dest_path, retries=3, delay=3):
@@ -153,9 +155,9 @@ def parse_options(options_str):
         opt = opt.strip()
         if not opt:
             continue
-        if opt == 'third-party':
+        if opt == 'third-party' or opt == '~first-party':
             is_third_party = True
-        elif opt == '~third-party':
+        elif opt == '~third-party' or opt == 'first-party':
             is_third_party = False
         elif opt.startswith('domain='):
             domains = opt[7:].split('|')
