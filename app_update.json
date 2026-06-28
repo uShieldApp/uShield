@@ -1,35 +1,35 @@
 {
-  "latest_version": "1.0.5",
+  "latest_version": "1.0.6",
   "min_required_version": "1.0.0",
   "store_url": "https://apps.apple.com/app/ushield-browser-adblocker/id6778865496",
   "rules_updated_count": 2000,
   "patch_notes": {
     "en": [
-      "- Upgrade extension settings interface\n- Upgrade anti-adblock defuser\n- Fix navigation protection bug\n- Update to the latest filters"
+      "- Improve ad-blocking performance and accuracy\n- Fix navigation guard bug\n- Fix remove overlays bug\n- Update to the latest filters"
     ],
     "vi": [
-      "- Nâng cấp giao diện cài đặt tiện ích mở rộng\n- Nâng cấp trình gỡ bỏ chặn quảng cáo\n- Sửa lỗi bảo vệ điều hướng\n- Cập nhật các bộ lọc mới nhất"
+      "- Cải thiện hiệu suất và độ chính xác chặn quảng cáo\n- Sửa lỗi bảo vệ điều hướng\n- Sửa lỗi loại bỏ lớp phủ\n- Cập nhật các bộ lọc mới nhất"
     ],
     "de": [
-      "- Aktualisieren Sie die Benutzeroberfläche für Erweiterungseinstellungen\n- Aktualisieren Sie den Anti-Adblock-Defuser\n- Fehler beim Navigationsschutz behoben\n- Aktualisieren Sie auf die neuesten Filter"
+      "- Verbessern Sie die Leistung und Genauigkeit der Werbeblocker\n- Behebung des Navigationsschutzfehlers\n- Fehler beim Entfernen von Overlays behoben\n- Aktualisieren Sie auf die neuesten Filter"
     ],
     "fr": [
-      "- Mettre à niveau l'interface des paramètres d'extension\n- Mettre à niveau le désamorceur anti-adblock\n- Correction d'un bug de protection de la navigation\n- Mise à jour avec les derniers filtres"
+      "- Améliorer les performances et la précision du blocage des publicités\n- Correction d'un bug de garde de navigation\n- Correction d'un bug de suppression des superpositions\n- Mise à jour avec les derniers filtres"
     ],
     "es": [
-      "- Actualizar la interfaz de configuración de la extensión\n- Actualizar el desactivador anti-adblock\n- Corregir error de protección de navegación.\n- Actualización a los últimos filtros."
+      "- Mejorar el rendimiento y la precisión del bloqueo de anuncios.\n- Corregir error de protección de navegación.\n- Se corrigió el error de eliminar superposiciones.\n- Actualización a los últimos filtros."
     ],
     "ru": [
-      "- Обновление интерфейса настроек расширения.\n- Обновление антиблокировщика рекламы.\n- Исправлена ошибка защиты навигации.\n- Обновление до последних фильтров"
+      "- Улучшение производительности и точности блокировки рекламы.\n- Исправлена ошибка навигационной защиты.\n- Исправлена ошибка удаления наложений.\n- Обновление до последних фильтров"
     ],
     "id": [
-      "- Tingkatkan antarmuka pengaturan ekstensi\n- Tingkatkan pencegah anti-adblock\n- Perbaiki bug perlindungan navigasi\n- Perbarui ke filter terbaru"
+      "- Meningkatkan kinerja dan akurasi pemblokiran iklan\n- Perbaiki bug penjaga navigasi\n- Perbaiki hapus bug overlay\n- Perbarui ke filter terbaru"
     ],
     "zh-Hans": [
-      "- 升级扩展设置界面\n- 升级反广告拦截消除器\n- 修复导航保护错误\n- 更新到最新的过滤器"
+      "- 提高广告拦截性能和准确性\n- 修复导航守卫错误\n- 修复删除覆盖错误\n- 更新到最新的过滤器"
     ],
     "ja": [
-      "- 拡張機能設定インターフェースのアップグレード\n- アンチアドブロックディフューザーをアップグレード\n- ナビゲーション保護のバグを修正\n- 最新のフィルターに更新します"
+      "- 広告ブロックのパフォーマンスと精度を向上させます\n- ナビゲーションガードのバグを修正\n- オーバーレイ削除のバグを修正\n- 最新のフィルターに更新します"
     ]
   },
   "is_force_update": false
