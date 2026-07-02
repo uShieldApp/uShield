@@ -1,17 +1,17 @@
 {
-  "version": "2026070113",
-  "hash": "8b8e1e924102",
-  "rules_count": 3522,
-  "updated_at": "2026-07-01T13:39:55.999387+00:00",
+  "version": "2026070211",
+  "hash": "d1fd3744c9bc",
+  "rules_count": 3788,
+  "updated_at": "2026-07-02T11:58:37.585842+00:00",
   "expires_hours": 24,
   "stats": {
     "ads": {
-      "total_latest": 52735,
-      "delta_new": 3434
+      "total_latest": 53002,
+      "delta_new": 3698
     },
     "privacy": {
-      "total_latest": 55451,
-      "delta_new": 80
+      "total_latest": 55453,
+      "delta_new": 82
     },
     "cookie": {
       "total_latest": 2089,
