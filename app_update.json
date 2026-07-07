@@ -1,35 +1,35 @@
 {
-  "latest_version": "1.0.6",
+  "latest_version": "1.0.7",
   "min_required_version": "1.0.0",
   "store_url": "https://apps.apple.com/app/ushield-browser-adblocker/id6778865496",
   "rules_updated_count": 2000,
   "patch_notes": {
     "en": [
-      "- Improve ad-blocking performance and accuracy\n- Fix navigation guard bug\n- Fix remove overlays bug\n- Update to the latest filters"
+      "- Fix navigation guard bug\n- Update to the latest filters"
     ],
     "vi": [
-      "- Cải thiện hiệu suất và độ chính xác chặn quảng cáo\n- Sửa lỗi bảo vệ điều hướng\n- Sửa lỗi loại bỏ lớp phủ\n- Cập nhật các bộ lọc mới nhất"
+      "- Sửa lỗi bảo vệ điều hướng\n- Cập nhật các bộ lọc mới nhất"
     ],
     "de": [
-      "- Verbessern Sie die Leistung und Genauigkeit der Werbeblocker\n- Behebung des Navigationsschutzfehlers\n- Fehler beim Entfernen von Overlays behoben\n- Aktualisieren Sie auf die neuesten Filter"
+      "- Behebung des Navigationsschutzfehlers\n- Aktualisieren Sie auf die neuesten Filter"
     ],
     "fr": [
-      "- Améliorer les performances et la précision du blocage des publicités\n- Correction d'un bug de garde de navigation\n- Correction d'un bug de suppression des superpositions\n- Mise à jour avec les derniers filtres"
+      "- Correction d'un bug de garde de navigation\n- Mise à jour avec les derniers filtres"
     ],
     "es": [
-      "- Mejorar el rendimiento y la precisión del bloqueo de anuncios.\n- Corregir error de protección de navegación.\n- Se corrigió el error de eliminar superposiciones.\n- Actualización a los últimos filtros."
+      "- Corregir error de protección de navegación.\n- Actualización a los últimos filtros."
     ],
     "ru": [
-      "- Улучшение производительности и точности блокировки рекламы.\n- Исправлена ошибка навигационной защиты.\n- Исправлена ошибка удаления наложений.\n- Обновление до последних фильтров"
+      "- Исправлена ошибка навигационной защиты.\n- Обновление до последних фильтров"
     ],
     "id": [
-      "- Meningkatkan kinerja dan akurasi pemblokiran iklan\n- Perbaiki bug penjaga navigasi\n- Perbaiki hapus bug overlay\n- Perbarui ke filter terbaru"
+      "- Perbaiki bug penjaga navigasi\n- Perbarui ke filter terbaru"
     ],
     "zh-Hans": [
-      "- 提高广告拦截性能和准确性\n- 修复导航守卫错误\n- 修复删除覆盖错误\n- 更新到最新的过滤器"
+      "- 修复导航守卫错误\n- 更新到最新的过滤器"
     ],
     "ja": [
-      "- 広告ブロックのパフォーマンスと精度を向上させます\n- ナビゲーションガードのバグを修正\n- オーバーレイ削除のバグを修正\n- 最新のフィルターに更新します"
+      "- Fix navigation guard bug\n- Update to the latest filters"
     ]
   },
   "is_force_update": false
