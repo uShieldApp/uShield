@@ -1,35 +1,35 @@
 {
-  "latest_version": "1.0.7",
+  "latest_version": "1.0.8",
   "min_required_version": "1.0.0",
   "store_url": "https://apps.apple.com/app/ushield-browser-adblocker/id6778865496",
   "rules_updated_count": 2000,
   "patch_notes": {
     "en": [
-      "- Fix navigation guard bug\n- Update to the latest filters"
+      "- Enhanced Anti-Adblock Defuser\n- Bug fixes and performance improvements"
     ],
     "vi": [
-      "- Sửa lỗi bảo vệ điều hướng\n- Cập nhật các bộ lọc mới nhất"
+      "- Trình giải mã chống chặn quảng cáo nâng cao\n- Sửa lỗi và cải thiện hiệu suất"
     ],
     "de": [
-      "- Behebung des Navigationsschutzfehlers\n- Aktualisieren Sie auf die neuesten Filter"
+      "- Verbesserter Anti-Adblock-Defuser\n- Fehlerbehebungen und Leistungsverbesserungen"
     ],
     "fr": [
-      "- Correction d'un bug de garde de navigation\n- Mise à jour avec les derniers filtres"
+      "- Désamorceur anti-Adblock amélioré\n- Corrections de bugs et améliorations des performances"
     ],
     "es": [
-      "- Corregir error de protección de navegación.\n- Actualización a los últimos filtros."
+      "- Desactivador Anti-Adblock mejorado\n- Corrección de errores y mejoras de rendimiento."
     ],
     "ru": [
-      "- Исправлена ошибка навигационной защиты.\n- Обновление до последних фильтров"
+      "- Улучшенная защита от блокировки рекламы.\n- Исправлены ошибки и улучшена производительность."
     ],
     "id": [
-      "- Perbaiki bug penjaga navigasi\n- Perbarui ke filter terbaru"
+      "- Pencegah Anti-Adblock yang Ditingkatkan\n- Perbaikan bug dan peningkatan kinerja"
     ],
     "zh-Hans": [
-      "- 修复导航守卫错误\n- 更新到最新的过滤器"
+      "- 增强的反广告拦截消除器\n- 错误修复和性能改进"
     ],
     "ja": [
-      "- Fix navigation guard bug\n- Update to the latest filters"
+      "- 強化されたアンチアドブロックディフューザー\n- バグ修正とパフォーマンスの向上"
     ]
   },
   "is_force_update": false
