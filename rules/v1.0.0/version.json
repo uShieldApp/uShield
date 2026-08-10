@@ -1,17 +1,17 @@
 {
-  "version": "2026080904",
-  "hash": "33664ba4fe29",
-  "rules_count": 22450,
-  "updated_at": "2026-08-09T04:59:29.636391+00:00",
+  "version": "2026081005",
+  "hash": "429d99251729",
+  "rules_count": 16827,
+  "updated_at": "2026-08-10T05:21:46.258520+00:00",
   "expires_hours": 24,
   "stats": {
     "ads": {
-      "total_latest": 62713,
-      "delta_new": 20895
+      "total_latest": 52508,
+      "delta_new": 15267
     },
     "privacy": {
-      "total_latest": 55659,
-      "delta_new": 1059
+      "total_latest": 55664,
+      "delta_new": 1064
     },
     "cookie": {
       "total_latest": 2096,
@@ -27,5 +27,5 @@
     }
   },
   "delta_url": "https://uShieldApp.github.io/uShield/rules/v1.0.0/delta_rules.json",
-  "outdated_baseline": true
+  "outdated_baseline": false
 }
