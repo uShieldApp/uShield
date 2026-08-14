@@ -1,35 +1,35 @@
 {
-  "latest_version": "1.0.8",
+  "latest_version": "1.0.9",
   "min_required_version": "1.0.0",
   "store_url": "https://apps.apple.com/app/ushield-browser-adblocker/id6778865496",
   "rules_updated_count": 2000,
   "patch_notes": {
     "en": [
-      "- Enhanced Anti-Adblock Defuser\n- Bug fixes and performance improvements"
+      "- Update to the latest ad blocking filters\n- Performance improvements"
     ],
     "vi": [
-      "- Trình giải mã chống chặn quảng cáo nâng cao\n- Sửa lỗi và cải thiện hiệu suất"
+      "- Cập nhật bộ lọc chặn quảng cáo mới nhất\n- Cải thiện hiệu suất"
     ],
     "de": [
-      "- Verbesserter Anti-Adblock-Defuser\n- Fehlerbehebungen und Leistungsverbesserungen"
+      "- Aktualisieren Sie auf die neuesten Werbeblockerfilter\n- Leistungsverbesserungen"
     ],
     "fr": [
-      "- Désamorceur anti-Adblock amélioré\n- Corrections de bugs et améliorations des performances"
+      "- Mise à jour des derniers filtres de blocage des publicités\n- Améliorations des performances"
     ],
     "es": [
-      "- Desactivador Anti-Adblock mejorado\n- Corrección de errores y mejoras de rendimiento."
+      "- Actualización a los últimos filtros de bloqueo de anuncios.\n- Mejoras de rendimiento"
     ],
     "ru": [
-      "- Улучшенная защита от блокировки рекламы.\n- Исправлены ошибки и улучшена производительность."
+      "- Обновление до последней версии фильтров блокировки рекламы.\n- Улучшения производительности"
     ],
     "id": [
-      "- Pencegah Anti-Adblock yang Ditingkatkan\n- Perbaikan bug dan peningkatan kinerja"
+      "- Perbarui ke filter pemblokiran iklan terbaru\n- Peningkatan kinerja"
     ],
     "zh-Hans": [
-      "- 增强的反广告拦截消除器\n- 错误修复和性能改进"
+      "- 更新到最新的广告拦截过滤器\n- 性能改进"
     ],
     "ja": [
-      "- 強化されたアンチアドブロックディフューザー\n- バグ修正とパフォーマンスの向上"
+      "- 最新の広告ブロックフィルターに更新します\n- パフォーマンスの向上"
     ]
   },
   "is_force_update": false
