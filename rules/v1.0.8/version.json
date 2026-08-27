@@ -1,25 +1,25 @@
 {
-  "version": "2026082604",
-  "hash": "180908480371",
-  "rules_count": 6913,
-  "updated_at": "2026-08-26T04:34:41.800107+00:00",
+  "version": "2026082714",
+  "hash": "7a4b424944fc",
+  "rules_count": 7306,
+  "updated_at": "2026-08-27T14:56:54.235127+00:00",
   "expires_hours": 24,
   "stats": {
     "ads": {
-      "total_latest": 54577,
-      "delta_new": 6446
+      "total_latest": 54958,
+      "delta_new": 6828
     },
     "privacy": {
-      "total_latest": 55917,
-      "delta_new": 435
+      "total_latest": 55924,
+      "delta_new": 442
     },
     "cookie": {
-      "total_latest": 2101,
-      "delta_new": 13
+      "total_latest": 2102,
+      "delta_new": 15
     },
     "annoyance": {
-      "total_latest": 4136,
-      "delta_new": 19
+      "total_latest": 4137,
+      "delta_new": 21
     },
     "social": {
       "total_latest": 665,
