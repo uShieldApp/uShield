@@ -1,5 +1,5 @@
 {
-  "latest_version": "1.0.9",
+  "latest_version": "1.1.0",
   "min_required_version": "1.0.0",
   "store_url": "https://apps.apple.com/app/ushield-browser-adblocker/id6778865496",
   "rules_updated_count": 2000,
@@ -20,7 +20,7 @@
       "- Actualización a los últimos filtros de bloqueo de anuncios.\n- Mejoras de rendimiento"
     ],
     "ru": [
-      "- Обновление до последней версии фильтров блокировки рекламы.\n- Улучшения производительности"
+      "- Обновление до последних фильтров блокировки рекламы.\n- Улучшения производительности"
     ],
     "id": [
       "- Perbarui ke filter pemblokiran iklan terbaru\n- Peningkatan kinerja"
