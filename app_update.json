@@ -1,5 +1,5 @@
 {
-  "latest_version": "1.1.0",
+  "latest_version": "1.1.1",
   "min_required_version": "1.0.0",
   "store_url": "https://apps.apple.com/app/ushield-browser-adblocker/id6778865496",
   "rules_updated_count": 2000,
@@ -8,28 +8,28 @@
       "- Update to the latest ad blocking filters\n- Performance improvements"
     ],
     "vi": [
-      "- Cập nhật bộ lọc chặn quảng cáo mới nhất\n- Cải thiện hiệu suất"
+      "- Update to the latest ad blocking filters\n- Performance improvements"
     ],
     "de": [
-      "- Aktualisieren Sie auf die neuesten Werbeblockerfilter\n- Leistungsverbesserungen"
+      "- Update to the latest ad blocking filters\n- Performance improvements"
     ],
     "fr": [
-      "- Mise à jour des derniers filtres de blocage des publicités\n- Améliorations des performances"
+      "- Update to the latest ad blocking filters\n- Performance improvements"
     ],
     "es": [
-      "- Actualización a los últimos filtros de bloqueo de anuncios.\n- Mejoras de rendimiento"
+      "- Update to the latest ad blocking filters\n- Performance improvements"
     ],
     "ru": [
-      "- Обновление до последних фильтров блокировки рекламы.\n- Улучшения производительности"
+      "- Update to the latest ad blocking filters\n- Performance improvements"
     ],
     "id": [
-      "- Perbarui ke filter pemblokiran iklan terbaru\n- Peningkatan kinerja"
+      "- Update to the latest ad blocking filters\n- Performance improvements"
     ],
     "zh-Hans": [
-      "- 更新到最新的广告拦截过滤器\n- 性能改进"
+      "- Update to the latest ad blocking filters\n- Performance improvements"
     ],
     "ja": [
-      "- 最新の広告ブロックフィルターに更新します\n- パフォーマンスの向上"
+      "- Update to the latest ad blocking filters\n- Performance improvements"
     ]
   },
   "is_force_update": false
