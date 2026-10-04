@@ -2,11 +2,11 @@
   "version": "2026100415",
   "hash": "4f53cda18c2b",
   "rules_count": 0,
-  "updated_at": "2026-10-04T15:42:17.193050+00:00",
+  "updated_at": "2026-10-04T15:46:22.924146+00:00",
   "expires_hours": 24,
   "stats": {
     "ads": {
-      "total_latest": 54561,
+      "total_latest": 54562,
       "delta_new": 0
     },
     "privacy": {
